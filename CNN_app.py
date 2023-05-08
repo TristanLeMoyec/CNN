@@ -53,6 +53,7 @@ with st.container():
         if selected == "Accueil":
             st.title('Bienvenue !')
             st.header('Ceci est un réseau de neurones convolutionnels permettant reconnaissance de chiffres :')
+            st.image('model.png')
             model = import_model("model.pickle")
             model_graph = model_to_dot(model,show_layer_names=True, show_layer_activations= True)
             model_graph = str(model_graph)
